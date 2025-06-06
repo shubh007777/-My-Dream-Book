@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Vriable </title>
-    <style>
-        :root{
-           --color: rgb(94, 214, 148);
-           --seccolor: rgb(117, 213, 106);
-        }
-        *{
-            padding: 0%;
-            margin: 0%;
-        }
-        ul{
-            display: flex;
-        }
-        ul li{ 
-            list-style: none;
-            padding: 34px;
-
-        }
-        ul li:first-child{
-           background-color: var(--color);
-           --color: rgb(236, 187, 49);
-        }
-.nav{
-    background-color:  var(--color);
-}
-.msd{
-    background-color: var(--seccolor);
-    
-}
-    </style>
+  <meta charset="UTF-8" />
+  <title>My Dream Book</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <div class="nav
-    ">
-        <ul>
-            <li>shubh</li>
-            <li>msd </li>
-            <li>travler</li>
+  <div class="container">
 
-        </ul>
+    <h1>🌟 My Dream Book</h1>
+
+    <div id="loginSection">
+      <input type="email" id="userEmail" placeholder="Enter your email to login" />
+      <button id="loginBtn">Login</button>
     </div>
-    <div class="msd"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, hic est et cum ipsum officia
-        nobis molestiae tempora voluptatum, at voluptatem ipsam dolores cumque. Maxime iusto voluptas iure excepturi
-        odit aut molestias. Totam deleniti facere ex id temporibus, fugit consequuntur odio labore et, atque ipsa.</div>
-</body>
 
+    <div id="welcomeMsg" style="display:none;">
+      <p>Welcome, <span id="userDisplay"></span>!</p>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <button id="toggleFormBtn" title="Add Dream">➕</button>
+
+    <form id="dreamForm" style="display:none;">
+      <input
+        type="text"
+        id="dreamTitle"
+        placeholder="Enter your dream..."
+        required
+      />
+      
+      <input
+        type="file"
+        id="dreamImages"
+        accept="image/*"
+        multiple
+      />
+      
+      <div class="link-input-container">
+        <input
+          type="url"
+          id="imageURL"
+          placeholder="Add image by URL (press Add)"
+        />
+        <button type="button" id="addUrlBtn">Add</button>
+      </div>
+
+      <button type="submit">Add Dream</button>
+    </form>
+
+    <div id="dreamList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
+
+
+
+
+
+
+
+
