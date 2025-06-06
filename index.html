@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Vriable </title>
+    <style>
+        :root{
+           --color: rgb(94, 214, 148);
+           --seccolor: rgb(117, 213, 106);
+        }
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        ul{
+            display: flex;
+        }
+        ul li{ 
+            list-style: none;
+            padding: 34px;
+
+        }
+        ul li:first-child{
+           background-color: var(--color);
+           --color: rgb(236, 187, 49);
+        }
+.nav{
+    background-color:  var(--color);
+}
+.msd{
+    background-color: var(--seccolor);
+    
+}
+    </style>
+</head>
+
+<body>
+    <div class="nav
+    ">
+        <ul>
+            <li>shubh</li>
+            <li>msd </li>
+            <li>travler</li>
+
+        </ul>
+    </div>
+    <div class="msd"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, hic est et cum ipsum officia
+        nobis molestiae tempora voluptatum, at voluptatem ipsam dolores cumque. Maxime iusto voluptas iure excepturi
+        odit aut molestias. Totam deleniti facere ex id temporibus, fugit consequuntur odio labore et, atque ipsa.</div>
+</body>
+
+</html>
